@@ -8,7 +8,7 @@ dependencies {
     compile localGroovy()
     compile gradleApi()
 }
-
+//Ce commentaire ne sert à rien
 publishing {
     publications {
         // On définie une nouvelle publication pour notre plugin
