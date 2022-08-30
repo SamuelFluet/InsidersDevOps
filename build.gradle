@@ -1,5 +1,6 @@
 //Fichier build.gradle
 group 'com.betomorrow.gradle'
+!roll 1d20 =1 "échec crititque"
 version '1.0-SNAPSHOT'
 
 apply plugin: 'groovy'
