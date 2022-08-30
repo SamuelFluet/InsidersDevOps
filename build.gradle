@@ -1,0 +1,22 @@
+group 'com.betomorrow.gradle'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'maven-publish' // On ajoute l'activation du plugin
+
+dependencies {
+    compile localGroovy()
+    compile gradleApi()
+}
+
+publishing {
+    publications {
+        // On définie une nouvelle publication pour notre plugin
+        gradlePlugin(MavenPublication) {
+            from components.java
+            pom.withXml {
+                asNode().appendNode('description', 'My First Gradle Plugin')
+            }
+        }
+    }
+}
