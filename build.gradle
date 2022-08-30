@@ -1,3 +1,4 @@
+//Fichier build.gradle
 group 'com.betomorrow.gradle'
 version '1.0-SNAPSHOT'
 
@@ -7,6 +8,9 @@ apply plugin: 'maven-publish' // On ajoute l'activation du plugin
 dependencies {
     compile localGroovy()
     compile gradleApi()
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:1.7.0'
+
 }
 //Ce commentaire ne sert à rien
 publishing {
